@@ -1,7 +1,10 @@
+using JWTAuthentication.NET6._0.Auth;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DrakeFanpage.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
