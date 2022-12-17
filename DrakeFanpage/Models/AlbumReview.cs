@@ -8,5 +8,10 @@
         public string Comment { get; set; }
         public int Rating { get; set; }
 
+    // Relations
+
+        public List<Album> Album { get; set; }
+
+
     }
 }
