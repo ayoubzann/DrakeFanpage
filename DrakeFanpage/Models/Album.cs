@@ -12,9 +12,9 @@ namespace DrakeFanpage.Models
         [StringLength(250, MinimumLength = 1, ErrorMessage = "Album title must be between 1 and 250 characters..")]
         public string Title { get; set; }
 
-        //[Display(Name = "Release date")]
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Release date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ReleaseDate { get; set; }
         
 

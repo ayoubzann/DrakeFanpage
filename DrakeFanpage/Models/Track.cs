@@ -21,20 +21,15 @@ namespace DrakeFanpage.Models
         [Required(ErrorMessage = "Song length is required, must be stated in number of seconds.")]
         public int Seconds { get; set; }
 
-        //[Display(Name ="Release date")]
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Release date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ReleaseDate { get; set; }
 
 
         //Relations
         public Album Album { get; set; }
-        //public Album AlbumID { get; set; }
         public List<TrackReview> TrackReviews { get; set; }
-
-        //public Photo Photo { get; set; }
-        //public int PhotoId { get; set; }
-
 
 
     }
