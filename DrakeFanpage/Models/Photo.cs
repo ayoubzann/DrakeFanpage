@@ -16,7 +16,9 @@ namespace DrakeFanpage.Models
         // Relations
 
         public Album? Album { get; set; }
-        public Track? Track { get; set; }
+        public int AlbumId { get; set; }
+        
+
 
     }
 }

@@ -1,3 +1,4 @@
+using DrakeFanpage.Data;
 using JWTAuthentication.NET6._0.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -6,8 +7,12 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-ConfigurationManager configuration = builder.Configuration;
 
+builder.Services.AddDbContext<FanpageContext>(options =>
+
+  options.UseSqlServer(builder.Configuration.GetConnectionString("FanpageContext") ?? throw new InvalidOperationException("Connection string 'FanPageContext' not found.")));
+
+ConfigurationManager configuration = builder.Configuration; 
 // Add services to the container.
 
 // For Entity Framework
