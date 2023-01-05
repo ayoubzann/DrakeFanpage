@@ -22,7 +22,7 @@ namespace DrakeFanpage.Models
         public List<Artist> Artists { get; set; }
         public List<Track> Tracks { get; set; }
         public AlbumReview? AlbumReview { get; set; }
-        public Photo Photo { get; set; }
+        public Photo? Photo { get; set; }
     }
 
     // ToDo: Add Constructors?

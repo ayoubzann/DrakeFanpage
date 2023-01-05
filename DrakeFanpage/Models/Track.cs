@@ -28,8 +28,8 @@ namespace DrakeFanpage.Models
 
 
         //Relations
-        public Album Album { get; set; }
-        public List<TrackReview> TrackReviews { get; set; }
+        public Album? Album { get; set; }
+        public List<TrackReview>? TrackReviews { get; set; }
 
 
     }
