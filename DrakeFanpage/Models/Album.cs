@@ -19,10 +19,26 @@ namespace DrakeFanpage.Models
         
 
         // Relations
-        public List<Artist> Artists { get; set; }
-        public List<Track> Tracks { get; set; }
+        public List<Artist>? Artists { get; set; }
+        public List<Track>? Tracks { get; set; }
         public AlbumReview? AlbumReview { get; set; }
         public Photo? Photo { get; set; }
+
+
+        public Album() { }
+
+        public Album(string title, DateTime releaseDate)
+        {
+            Title = title;
+            ReleaseDate = releaseDate;
+        }
+        public Album(string title, string description, string author, DateTime releaseDate)
+        {
+            Title = title;
+            ReleaseDate = releaseDate;
+        }
+
+
     }
 
     // ToDo: Add Constructors?

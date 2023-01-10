@@ -5,6 +5,10 @@ namespace DrakeFanpage.Data
 {
     public class FanpageContext : DbContext
     {
+        public FanpageContext()
+        {
+        }
+
         public FanpageContext(DbContextOptions<FanpageContext> options) : base(options) { }
 
 
