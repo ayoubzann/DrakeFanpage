@@ -92,10 +92,7 @@ namespace DrakeFanpage.Controllers
                 return NotFound();
             }
             var album = await _dbContext.Albums.FindAsync(id);
-            if (DeleteAlbum == null)
-            {
-                return NotFound();
-            }
+            if (album == null) return NotFound($"Album with id = {id} not found");
 
             _dbContext.Albums.Remove(album);
             await _dbContext.SaveChangesAsync();

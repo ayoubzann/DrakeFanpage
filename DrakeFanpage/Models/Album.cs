@@ -15,28 +15,20 @@ namespace DrakeFanpage.Models
         [Display(Name = "Release date")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime ReleaseDate { get; set; }
-        
+        public string? ReleaseDate { get; set; }
+        public string? PhotoUrl { get; set; }
+
 
         // Relations
         public List<Artist>? Artists { get; set; }
         public List<Track>? Tracks { get; set; }
         public AlbumReview? AlbumReview { get; set; }
-        public Photo? Photo { get; set; }
+        //public Photo? Photo { get; set; }
 
 
         public Album() { }
 
-        public Album(string title, DateTime releaseDate)
-        {
-            Title = title;
-            ReleaseDate = releaseDate;
-        }
-        public Album(string title, string description, string author, DateTime releaseDate)
-        {
-            Title = title;
-            ReleaseDate = releaseDate;
-        }
+      
 
 
     }

@@ -87,19 +87,14 @@ namespace DrakeFanpage.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTrack(int id)
         {
-            if (_dbContext.Tracks == null)
-            {
-                return NotFound();
-            }
+            if (_dbContext.Tracks == null) return NotFound();
+
+            
             var track = await _dbContext.Tracks.FindAsync(id);
-            if (DeleteTrack == null)
-            {
-                return NotFound();
-            }
+            if (track == null) return NotFound($"Track with id = {id} not found");
 
             _dbContext.Tracks.Remove(track);
             await _dbContext.SaveChangesAsync();
-
             return NoContent();
         }
 

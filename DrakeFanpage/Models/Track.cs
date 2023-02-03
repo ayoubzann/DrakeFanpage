@@ -22,9 +22,10 @@ namespace DrakeFanpage.Models
         public int Seconds { get; set; }
 
         [Display(Name = "Release date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime ReleaseDate { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public string? ReleaseDate { get; set; }
+
+        public string? PhotoUrl { get; set; }
 
 
         //Relations

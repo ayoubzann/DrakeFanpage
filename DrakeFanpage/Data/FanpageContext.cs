@@ -15,7 +15,6 @@ namespace DrakeFanpage.Data
         public DbSet<Album> Albums { get; set; }
         public DbSet<AlbumReview> AlbumReviews { get; set; }
         public DbSet<Artist> Artists {get; set;}
-        public DbSet<Photo> Photos {get; set;}
         public DbSet<Track> Tracks {get; set;}
         public DbSet<TrackReview> TrackReviews {get; set;}
 
