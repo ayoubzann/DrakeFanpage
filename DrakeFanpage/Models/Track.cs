@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 
 namespace DrakeFanpage.Models
 {
@@ -29,7 +30,8 @@ namespace DrakeFanpage.Models
 
 
         //Relations
-        public Album? Album { get; set; }
+        public int? AlbumId { get; set; }
+        public Album Album { get; set; }
         public List<TrackReview>? TrackReviews { get; set; }
 
 
