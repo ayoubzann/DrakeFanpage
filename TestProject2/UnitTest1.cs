@@ -25,20 +25,6 @@ namespace TestProject2
             Assert.AreEqual(title, album.Title);
         }
 
-        //[Test]
-        //public void Album_SetsReleaseDate()
-        //{
-        //    // Arrange
-        //    var releaseDate = new string(2020, 1, 1);
-
-        //    // Act
-        //    var album = new Album { ReleaseDate = releaseDate };
-
-        //    // Assert
-        //    Assert.AreEqual(releaseDate, album.ReleaseDate);
-        //}
-
-
 
     }
 

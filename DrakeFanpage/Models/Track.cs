@@ -7,10 +7,10 @@ namespace DrakeFanpage.Models
     {
         [Key]
         public int Id { get; set; }
-        
+
         [Display(Name = "Song Title")]
         [Required(ErrorMessage = "Song title is required.")]
-        [StringLength(250,MinimumLength = 1, ErrorMessage = "The song title must be between 1 and 250 characters.")]
+        [StringLength(250, MinimumLength = 1, ErrorMessage = "The song title must be between 1 and 250 characters.")]
         public string Title { get; set; }
 
         [Display(Name = "Composer")]
@@ -31,7 +31,7 @@ namespace DrakeFanpage.Models
 
         //Relations
         public int? AlbumId { get; set; }
-        public Album Album { get; set; }
+        public Album? Album { get; set; }
         public List<TrackReview>? TrackReviews { get; set; }
 
 
